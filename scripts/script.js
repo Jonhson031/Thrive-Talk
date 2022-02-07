@@ -34,3 +34,10 @@ buttonLeft.addEventListener('mouseover', () => { // вешаем событие 
   buttonLeft.classList.remove('main-button__left-active');
   buttonRight.classList.remove('main-button__right-active');
 });
+window.onload = function () {
+  document.body.classList.add('loaded_hiding');
+  window.setTimeout(function () {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loaded_hiding');
+  }, 500);
+}
